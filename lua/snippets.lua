@@ -1,14 +1,14 @@
 local ls = require("luasnip")
 local fmt = require("luasnip.extras.fmt").fmt
 local snip = ls.snippet
-local node = ls.snippet_node
+-- local node = ls.snippet_node
 local text = ls.text_node
 local insert = ls.insert_node
-local func = ls.function_node
-local choice = ls.choice_node
-local dynamicn = ls.dynamic_node
+-- local func = ls.function_node
+-- local choice = ls.choice_node
+-- local dynamicn = ls.dynamic_node
 
-local date = function() return { os.date('%Y-%m-%d') } end
+-- local date = function() return { os.date('%Y-%m-%d') } end
 
 ls.cleanup()
 ls.add_snippets(nil, {
@@ -36,6 +36,18 @@ ls.add_snippets(nil, {
             useMemo(() => {{
                 {}
             }}, [{}]);]], { insert(1), insert(2) })
+        ),
+        snip("fff", fmt([[
+            f({{ id: '{}' }})
+            ]], { insert(1) })
+        ),
+        snip("ffj", fmt([[
+            {{f({{ id: '{}' }})}}
+            ]], { insert(1) })
+        ),
+        snip("ffu", fmt([[
+            const {{ formatMessage: f }} = useIntl();{}
+            ]], { insert(1) })
         ),
     },
 })

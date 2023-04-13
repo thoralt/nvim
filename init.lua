@@ -83,6 +83,7 @@ require('packer').startup(function(use)
 
   use 'windwp/nvim-autopairs'
   use 'windwp/nvim-ts-autotag'
+  use 'kassio/neoterm'
 
   use {
     'nvim-tree/nvim-tree.lua',
@@ -91,7 +92,9 @@ require('packer').startup(function(use)
     },
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
-  require("nvim-tree").setup()
+  require("nvim-tree").setup({
+    view = { preserve_window_proportions = true }
+  })
 
   -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
   local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -514,3 +517,4 @@ vim.keymap.set('n', '<Leader>+', ':vertical resize +25<CR>', {})
 vim.keymap.set('n', '<Leader>-', ':vertical resize -25<CR>', {})
 vim.keymap.set('n', '<Leader>*', ':resize +25<CR>', {})
 vim.keymap.set('n', '<Leader>_', ':resize -25<CR>', {})
+vim.keymap.set('n', '<Leader>t', ':NvimTreeToggle<CR>', {})
