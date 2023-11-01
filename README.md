@@ -10,7 +10,7 @@ Just start neovim and wait until installation has finished.
 
 # Post-Installation
 
-Use :Mason to install the following packages:
+Use :Mason to install the following packages, if not already installed:
 
 - clangd
 - eslint-lsp
