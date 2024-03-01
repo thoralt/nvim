@@ -20,3 +20,7 @@ vim.keymap.set("n", "<Leader>_", ":resize -25<CR>", {})
 vim.keymap.set("n", "<Leader>t", ":Neotree toggle<CR>", {})
 vim.keymap.set("n", "<Leader>gg", ":Neotree float git_status<CR>", {})
 vim.keymap.set("n", "<Leader>z", ":ZenMode<CR>", {})
+
+vim.keymap.set("n", "<Leader>gn", ":Gitsigns next_hunk<CR>", {})
+vim.keymap.set("n", "<Leader>gp", ":Gitsigns prev_hunk<CR>", {})
+vim.keymap.set("n", "<Leader>gr", ":Gitsigns reset_hunk<CR>", {})
