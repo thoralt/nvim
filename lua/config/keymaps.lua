@@ -41,3 +41,6 @@ require("copilot").setup({
   suggestion = { enabled = false },
   panel = { enabled = false },
 })
+vim.keymap.set("n", "<Leader>gn", ":Gitsigns next_hunk<CR>", {})
+vim.keymap.set("n", "<Leader>gp", ":Gitsigns prev_hunk<CR>", {})
+vim.keymap.set("n", "<Leader>gr", ":Gitsigns reset_hunk<CR>", {})
